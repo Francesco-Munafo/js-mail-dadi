@@ -57,23 +57,37 @@ cpuDiceNumber.innerHTML = computerChoice;
 
 const submit = document.getElementById("submit");
 const whitelistedEmails = ['email1@email.com', 'email2@email.com', 'email3@email.com', 'email4@email.com', 'email5@email.com'];
-const userEmail = document.getElementById('user-mail').value;
+const userEmail = document.getElementById('user-mail');
 const whitelistCheck = document.getElementById('whitelist-result')
 
 submit.addEventListener('click',
     function () {
+
+
+        let trovata = false;
+
         for (let i = 0; i < whitelistedEmails.length; i++) {
+
             const email = whitelistedEmails[i];
 
-            if (userEmail === email) {
-                whitelistCheck.innerHTML = "Bentornato" + " " + userEmail;
-                console.log("Bentornato");
+            if (userEmail.value === email) {
+                trovata = true;
             }
-
-
+            
+            
+            
         }
-        whitelistCheck.innerHTML = "You're not in whitelist"
+
+        if (trovata) {
+            whitelistCheck.innerHTML = "Welcome" + " " + userEmail.value;
+            console.log("Welcome");
+
+        } else {
+
+            whitelistCheck.innerHTML = "You're not in whitelist";   
+        }        
     }
+        
 )
 
 

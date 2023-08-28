@@ -45,3 +45,8 @@ h4{
     font-size: 30px;
     padding-top: 2.5rem;
 }
+
+#whitelist-result{
+    padding-left: 2rem;
+    color: orange;
+}
