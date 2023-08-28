@@ -14,9 +14,34 @@ main{
     padding: 2rem;
 }
 
+.d-flex{
+    display: flex;
+    gap: 16px;
+}
+
+
 .dice {
     height: 80px;
     aspect-ratio: 1 / 1;
     border-radius: 5px;
     background-color: rgb(247, 247, 230);
+
+}
+
+
+h4{
+    color: white;
+    text-align: center;
+}
+
+.dot-1 , .dot-2{
+    font-size: 24px;
+    padding-top: 26px;
+    text-align: center;
+}
+
+#result{
+    color: orange;
+    font-size: 30px;
+    padding-top: 2.5rem;
 }

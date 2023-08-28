@@ -10,17 +10,69 @@ Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in
 
 // Sviluppo la scelta dei dadi
 
+
 let playerChoice = Math.floor(Math.random() * 6) + 1;
-console.log('Scelta per il giocatore' + " " +playerChoice);
+console.log('Scelta per il giocatore' + " " + playerChoice);
 let computerChoice = Math.floor(Math.random() * 6) + 1;
-console.log('Scelta per il computer' + " " +computerChoice);
+console.log('Scelta per il computer' + " " + computerChoice);
+
+// Stampo i puntini sui dadi NOTA*** Molto complesso attualmente in quanto bisognerebbe cambiare manualmente la position dei puntini ogni volta e poi far aggiungere i div
+
+// let userDice = document.querySelector('.user-dice')
+
+// const computerDice = document.querySelector('.cpu-dice')
 
 
+const result = document.getElementById('result')
 
 if (playerChoice < computerChoice) {
+    result.innerHTML = 'CPU wins'
     console.log('CPU wins!');
+
 } else if (playerChoice > computerChoice) {
+    result.innerHTML = 'You win!'
     console.log('You win!');
+
 } else {
+    result.innerHTML = 'Draw!'
     console.log('Draw');
 }
+
+// ***Mi limito a far comparire il numero sul dado
+
+
+const userDiceNumber = document.querySelector('.dot-1');
+userDiceNumber.innerHTML = playerChoice;
+
+const cpuDiceNumber = document.querySelector('.dot-2');
+cpuDiceNumber.innerHTML = computerChoice;
+
+
+// Email
+// Creo un array con varie email
+
+
+
+// Creo
+
+const submit = document.getElementById("submit");
+const whitelistedEmails = ['email1@email.com', 'email2@email.com', 'email3@email.com', 'email4@email.com', 'email5@email.com'];
+console.log(whitelistedEmails);
+const userEmail = document.getElementById('user-mail');
+
+submit.addEventListener('click',
+    function () {
+        
+        const whitelistCheck = document.getElementById('whitelist-result')
+        
+
+        if (userEmail === whitelistedEmails) {
+            whitelistCheck.innerHTML = "Bentornato" + " " + userEmail;
+        } else {
+            whitelistCheck.innerHTML = "You're not in whitelist"
+            console.log("You're not in whitelist");
+        }
+    }
+)
+
+

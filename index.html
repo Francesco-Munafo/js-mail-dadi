@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dice and whitelist</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-    
-    <main>
-        <div class="container">
-          <div class="dice"></div>  
-        </div>
-        
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dice and whitelist</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
 
-    </main>
+        <main>
+            <div class="container d-flex">
+                <div class="card">
+                    <h4>Your dice</h4>
+                    <div class="user-dice dice">
+                        <div class="dots dot-1"></div>
+                    </div>
+                </div>
 
-    <script src="./assets/js/main.js"></script>
-</body>
+                <div class="card">
+                    <h4>CPU dice</h4>
+                    <div class="cpu-dice dice">
+                        <div class="dots dot-2"></div>
+                    </div>
+                </div>
+
+                <div id="result"></div>
+            </div>
+            <div class="container">
+                <input id="user-mail" type="text">
+                <button id="submit" type="submit">Accedi</button>
+            </div>
+            <div id="whitelist-result"></div>
+
+        </main>
+
+        <script src="./assets/js/main.js"></script>
+    </body>
 </html>
