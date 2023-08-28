@@ -8,3 +8,19 @@ Bonus
 Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in pagina.
 */
 
+// Sviluppo la scelta dei dadi
+
+let playerChoice = Math.floor(Math.random() * 6) + 1;
+console.log('Scelta per il giocatore' + " " +playerChoice);
+let computerChoice = Math.floor(Math.random() * 6) + 1;
+console.log('Scelta per il computer' + " " +computerChoice);
+
+
+
+if (playerChoice < computerChoice) {
+    console.log('CPU wins!');
+} else if (playerChoice > computerChoice) {
+    console.log('You win!');
+} else {
+    console.log('Draw');
+}
